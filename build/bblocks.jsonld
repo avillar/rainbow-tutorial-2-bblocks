@@ -165,7 +165,7 @@
     }
   ],
   "name": "Building Blocks - Air Quality Sensor Blocks",
-  "modified": "2026-03-03T13:40:28.509578",
+  "modified": "2026-03-03T13:46:07.422290",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"701faf76bc0f3f50a0bc65888e0d7433c50d30c2",
@@ -220,6 +220,9 @@
       "itemClass": "schema",
       "version": "0.1",
       "dateOfLastChange": "2026-03-03",
+      "isProfileOf": [
+        "bblocks://ogc.geo.features.feature"
+      ],
       "scope": "unstable",
       "tags": [
         "air-quality",
@@ -239,8 +242,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.geo.features.feature",
-        "bblocks://ogc.sosa.properties.observation"
+        "bblocks://ogc.sosa.properties.observation",
+        "bblocks://ogc.geo.features.feature"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/context.jsonld",
@@ -291,7 +294,6 @@
       "skos:prefLabel": "Air Quality Sensor Station",
       "openAPIDocument": null,
       "ontology": null,
-      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://avillar.github.io/rainbow-tutorial-2-bblocks/"
       }
