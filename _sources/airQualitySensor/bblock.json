@@ -6,6 +6,9 @@
   "itemClass": "schema",
   "version": "0.1",
   "dateOfLastChange": "2024-01-01",
+  "isProfileOf": [
+    "ogc.geo.features.feature"
+  ],
   "scope": "unstable",
   "tags": [
     "air-quality",
