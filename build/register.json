@@ -1,0 +1,94 @@
+{
+  "name": "Air Quality Sensor Blocks",
+  "modified": "2026-03-03T12:46:08.629885",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"701faf76bc0f3f50a0bc65888e0d7433c50d30c2",
+      "shortCommitId": "\"701faf",
+      "date": "2026-03-03T10:23:06+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/avillar/rainbow-tutorial-2-bblocks",
+  "gitHubRepository": "https://github.com/avillar/rainbow-tutorial-2-bblocks/blob/master/",
+  "baseURL": "https://avillar.github.io/rainbow-tutorial-2-bblocks/",
+  "viewerURL": "https://avillar.github.io/rainbow-tutorial-2-bblocks/",
+  "validationReport": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/tests/report.html",
+  "validationReportJson": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json",
+    "https://opengeospatial.github.io/ogcapi-sosa/build/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "r1.tutorial.sensors.airQualitySensor",
+      "name": "Air Quality Sensor Station",
+      "abstract": "A GeoJSON Feature describing a fixed air quality monitoring station, including SOSA observations of atmospheric properties.",
+      "status": "under-development",
+      "dateTimeAddition": "2024-01-01T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.1",
+      "dateOfLastChange": "2026-03-03",
+      "scope": "unstable",
+      "tags": [
+        "air-quality",
+        "sensors",
+        "observations",
+        "sosa"
+      ],
+      "shaclShapes": {
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "ogc.geo.features.feature",
+        "ogc.sosa.properties.observation"
+      ],
+      "ldContext": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/context.jsonld",
+      "schema": {
+        "application/yaml": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/schema.yaml",
+        "application/json": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/schema.json"
+      },
+      "sourceSchema": "https://avillar.github.io/rainbow-tutorial-2-bblocks/_sources/airQualitySensor/schema.yaml",
+      "sourceLdContext": "https://avillar.github.io/rainbow-tutorial-2-bblocks/_sources/airQualitySensor/context.jsonld",
+      "sourceFiles": "https://avillar.github.io/rainbow-tutorial-2-bblocks/_sources/airQualitySensor/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/generateddocs/markdown/tutorial/sensors/airQualitySensor/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/generateddocs/json-full/tutorial/sensors/airQualitySensor/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://avillar.github.io/rainbow-tutorial-2-bblocks/bblock/r1.tutorial.sensors.airQualitySensor"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}

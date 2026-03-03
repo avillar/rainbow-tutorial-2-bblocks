@@ -1,0 +1,41 @@
+
+
+{
+  "itemIdentifier": "r1.tutorial.sensors.airQualitySensor",
+  "name": "Air Quality Sensor Station",
+  "abstract": "A GeoJSON Feature describing a fixed air quality monitoring station, including SOSA observations of atmospheric properties.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-01-01T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.1",
+  "dateOfLastChange": "2026-03-03",
+  "scope": "unstable",
+  "tags": [
+    "air-quality",
+    "sensors",
+    "observations",
+    "sosa"
+  ],
+  "shaclShapes": {
+    "ogc.sosa.properties.observation": [
+      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.geo.features.feature",
+    "ogc.sosa.properties.observation"
+  ],
+  "ldContext": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/context.jsonld",
+  "schema": {
+    "application/yaml": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/schema.yaml",
+    "application/json": "https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/schema.json"
+  },
+  "sourceSchema": "https://avillar.github.io/rainbow-tutorial-2-bblocks/_sources/airQualitySensor/schema.yaml",
+  "sourceLdContext": "https://avillar.github.io/rainbow-tutorial-2-bblocks/_sources/airQualitySensor/context.jsonld",
+  "sourceFiles": "https://avillar.github.io/rainbow-tutorial-2-bblocks/_sources/airQualitySensor/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: An air quality monitoring sensor station as a GeoJSON Feature\nallOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n- properties:\n    properties:\n      type: object\n      properties:\n        name:\n          type: string\n          description: Human-readable name of the sensor station\n          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\n        serialNumber:\n          type: string\n          description: Manufacturer-assigned serial number of the sensor unit\n          x-jsonld-id: http://purl.org/dc/terms/identifier\n        hasObservations:\n          type: array\n          description: Air quality observations recorded at this station\n          items:\n            $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml\n          x-jsonld-id: http://www.w3.org/ns/sosa/isFeatureOfInterestOf\n      required:\n      - name\n",
+  "gitRepository": "https://github.com/avillar/rainbow-tutorial-2-bblocks",
+  "gitPath": "_sources/airQualitySensor"
+}

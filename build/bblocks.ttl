@@ -1,0 +1,107 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix shacl: <https://www.w3.org/TR/shacl/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bblocks://r1.tutorial.sensors.airQualitySensor> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Air Quality Sensor Station" ;
+    dct:abstract "A GeoJSON Feature describing a fixed air quality monitoring station, including SOSA observations of atmospheric properties."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/generateddocs/json-full/tutorial/sensors/airQualitySensor/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/rainbow-tutorial-2-bblocks/bblock/r1.tutorial.sensors.airQualitySensor> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/generateddocs/markdown/tutorial/sensors/airQualitySensor/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-03-03"^^xsd:date ;
+    skos:inScheme <https://avillar.github.io/rainbow-tutorial-2-bblocks/> ;
+    skos:prefLabel "Air Quality Sensor Station" ;
+    skos:topConceptOf <https://avillar.github.io/rainbow-tutorial-2-bblocks/> ;
+    dcat:keyword "air-quality",
+        "observations",
+        "sensors",
+        "sosa" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/annotated/tutorial/sensors/airQualitySensor/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.geo.features.feature>,
+        <bblocks://ogc.sosa.properties.observation> ;
+    bblocks:hasSourceJsonLdContext <https://avillar.github.io/rainbow-tutorial-2-bblocks/_sources/airQualitySensor/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://avillar.github.io/rainbow-tutorial-2-bblocks/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N1cf164a156ec431594731583663f070d ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-03-03T12:46:09.763763"^^xsd:dateTime ;
+            prov:startedAtTime "2026-03-03T12:46:09.575297"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:ba3280fe4fca70f4593a2548bca60c62466b55fa" ;
+                    rdfs:seeAlso <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N1cf164a156ec431594731583663f070d ] .
+
+<https://avillar.github.io/rainbow-tutorial-2-bblocks/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
+    rdfs:label "Building Blocks - Air Quality Sensor Blocks" ;
+    dct:modified "2026-03-03T12:46:08.629885"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json>,
+        <https://opengeospatial.github.io/ogcapi-sosa/build/register.json> ;
+    skos:hasTopConcept <bblocks://r1.tutorial.sensors.airQualitySensor> ;
+    skos:prefLabel "Building Blocks - Air Quality Sensor Blocks" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/bblocks.jsonld> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/bblocks.ttl> ] ;
+    foaf:homepage <https://avillar.github.io/rainbow-tutorial-2-bblocks/> ;
+    bblocks:hasValidationReport <https://avillar.github.io/rainbow-tutorial-2-bblocks/build/tests/report.html> .
+
+_:N1cf164a156ec431594731583663f070d a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.18" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+
