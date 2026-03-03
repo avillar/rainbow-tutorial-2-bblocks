@@ -21,9 +21,6 @@
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
     ]
   },
-  "isProfileOf": [
-    "ogc.geo.features.feature"
-  ],
   "dependsOn": [
     "ogc.geo.features.feature",
     "ogc.sosa.properties.observation"
